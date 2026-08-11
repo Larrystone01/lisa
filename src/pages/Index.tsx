@@ -199,10 +199,10 @@ export default function HomePage() {
       <section className="home-prefooter bg-[url('images/homeprefooterbg.png')] bg-cover bg-no-repeat text-white py-10 h-205 flex items-center">
         <div className="container mx-auto px-6">
           <div className="content flex flex-col items-center space-y-8">
-            <h3 className="text-[84px] font-semibold font-primary tracking-[-1.68px] text-white">
+            <h3 className="text-[60px] md:text-[84px] font-semibold font-primary tracking-[-1.68px] text-white">
               Come as you are
             </h3>
-            <p className="description leading-8 text-[18px] tracking-0">
+            <p className="description leading-8 text-[18px] tracking-0 text-center">
               No performance required. No perfection expected. Just an open
               heart and a seat at the table.
             </p>
