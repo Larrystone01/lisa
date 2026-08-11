@@ -63,7 +63,7 @@ export default function HomePage() {
               <img src="/images/sideimg.png" alt="" />
             </div>
             <div className="mobile-img flex flex-col-reverse gap-10 md:hidden">
-              <div className="img_testimonial">
+              <div className="img_testimonial flex flex-col items-center space-y-6">
                 <img src="/images/mobilesideimg.png" alt="" />
                 <div className="testimonial mt-6 border-l pl-6">
                   <p className="testimony leading-6 tracking-0 text-[16px] italic">
@@ -110,12 +110,12 @@ export default function HomePage() {
       </section>
       <section className="gathering bg-bg py-20">
         <div className="container mx-auto px-6">
-          <div className="content flex justify-between items-center border-t border-b py-10">
+          <div className="content flex flex-col md:flex-row md:justify-between space-y-7 items-center border-t border-b py-10">
             <div className="heading">
               <h2 className="font-primary text-[60px] italic tracking-0 font-medium">
                 Sunday Gathering
               </h2>
-              <p className="uppercase tracking-[2.4px] font-semibold text-[14px] leading-4">
+              <p className="uppercase tracking-[2.4px] font-semibold text-[14px] leading-4 text-center md:text-left">
                 join us in person or online
               </p>
             </div>
@@ -128,7 +128,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="description-content pt-12 grid grid-cols-2 items-center">
+          <div className="description-content pt-12 flex flex-col space-y-10 md:grid grid-cols-2 items-center">
             <img src="/images/gatheringImg.png" alt="" />
             <p className="leading-8 tracking-0 text-[16px] border-l pl-8">
               "Every Sunday, we gather to reset our hearts through music, shared
@@ -150,7 +150,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-      <section className="upcoming-events bg-neutral">
+      <section className="upcoming-events bg-neutral pb-20">
         <div className="container mx-auto px-6">
           <div className="heading flex justify-between items-center mb-10">
             <h3 className="text-[48px] font-medium font-primary leading-14">
