@@ -10,7 +10,7 @@ import Button from "../components/button";
 export default function HomePage() {
   return (
     <main className="">
-      <section className="md:bg-[url('images/home-bg.png')] bg-[url('images/mobilebg.png')] bg-cover bg-center bg-no-repeat h-screen">
+      <section className="md:bg-[url('/images/home-bg.png')] bg-[url('/images/mobilebg.png')] bg-cover bg-center bg-no-repeat h-screen">
         <div className="container mx-auto px-6">
           <div className="hero flex flex-col justify-center h-[90svh] text-white md:max-w-190">
             <h4 className="text-[12px] font-semibold tracking-[2.4px] uppercase text-primary md:hidden">
@@ -60,11 +60,11 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="section-content md:flex justify-between">
             <div className="mobile-section hidden md:block">
-              <img src="images/sideimg.png" alt="" />
+              <img src="/images/sideimg.png" alt="" />
             </div>
             <div className="mobile-img flex flex-col-reverse gap-10 md:hidden">
               <div className="img_testimonial">
-                <img src="images/mobilesideimg.png" alt="" />
+                <img src="/images/mobilesideimg.png" alt="" />
                 <div className="testimonial mt-6 border-l pl-6">
                   <p className="testimony leading-6 tracking-0 text-[16px] italic">
                     "I found more than a church; I found a family that listens
@@ -129,7 +129,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="description-content pt-12 grid grid-cols-2 items-center">
-            <img src="images/gatheringImg.png" alt="" />
+            <img src="/images/gatheringImg.png" alt="" />
             <p className="leading-8 tracking-0 text-[16px] border-l pl-8">
               "Every Sunday, we gather to reset our hearts through music, shared
               stories, and a transformative message. It's more than a service;
@@ -191,12 +191,12 @@ export default function HomePage() {
               </div>
             </div>
             <div className="image flex-1/3 hidden md:block">
-              <img src="images/imgborder.png" alt="" />
+              <img src="/images/imgborder.png" alt="" />
             </div>
           </div>
         </div>
       </section>
-      <section className="home-prefooter bg-[url('images/homeprefooterbg.png')] bg-cover bg-no-repeat text-white py-10 h-205 flex items-center">
+      <section className="home-prefooter bg-[url('/images/homeprefooterbg.png')] bg-cover bg-no-repeat text-white py-10 h-205 flex items-center">
         <div className="container mx-auto px-6">
           <div className="content flex flex-col items-center space-y-8">
             <h3 className="text-[60px] md:text-[84px] font-semibold font-primary tracking-[-1.68px] text-white">
