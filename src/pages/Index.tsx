@@ -112,7 +112,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="content flex flex-col md:flex-row md:justify-between space-y-7 items-center border-t border-b py-10">
             <div className="heading">
-              <h2 className="font-primary text-[60px] italic tracking-0 font-medium">
+              <h2 className="font-primary text-center md:text-left text-[60px] italic tracking-0 font-medium">
                 Sunday Gathering
               </h2>
               <p className="uppercase tracking-[2.4px] font-semibold text-[14px] leading-4 text-center md:text-left">
