@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
           {/* Mobile Navigation */}
           <div
-            className={`${mobilestyling} mobile-nav absolute md:hidden bg-neutral w-[75%] h-screen top-0 left-0 py-20 px-8 shadow-2xl transition-all duration-1000`}
+            className={`${mobilestyling} mobile-nav z-50 absolute md:hidden bg-neutral w-[75%] h-screen top-0 left-0 py-20 px-8 shadow-2xl transition-all duration-1000`}
           >
             <div className="mobile-nav-container">
               <div className="top-heading flex justify-between items-center mb-10">
