@@ -9,26 +9,29 @@ type ButtonProps = {
 
 const Button = (props: ButtonProps) => {
   return (
-    <StyledWrapper {...props}>
-      <button
-        className="uppercase"
-        style={{
-          backgroundColor: props.bgColor,
-          border: `1px solid ${props.borderColor}`,
-        }}
-      >
-        {props.name}
-      </button>
+    <StyledWrapper
+      $bgColor={props.bgColor}
+      $borderColor={props.borderColor}
+      $textColor={props.textColor}
+    >
+      <button className="uppercase">{props.name}</button>
     </StyledWrapper>
   );
 };
 
-const StyledWrapper = styled.div<ButtonProps>`
+type StyledWrapperProps = {
+  $bgColor: string;
+  $textColor: string;
+  $borderColor?: string;
+};
+
+const StyledWrapper = styled.div<StyledWrapperProps>`
   button {
     appearance: none;
-    // border-radius: 0.9375em;
+    background-color: ${(props) => props.$bgColor};
+    border: 1px solid ${(props) => props.$borderColor ?? "transparent"};
     box-sizing: border-box;
-    color: ${(props) => props.textColor};
+    color: ${(props) => props.$textColor};
     cursor: pointer;
     display: inline-block;
     font-family:
@@ -66,8 +69,14 @@ const StyledWrapper = styled.div<ButtonProps>`
   button:hover {
     color: #fff;
     background-color: #1a1a1a;
+    border-color: #1a1a1a;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
+  }
+
+  button:focus-visible {
+    outline: 2px solid #b35c44;
+    outline-offset: 4px;
   }
 
   button:active {

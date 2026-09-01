@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Event", path: "/events" },
+  { name: "Sermons", path: "/sermons" },
   { name: "Testimonies", path: "/testimonies" },
   { name: "Join Us", path: "/contact" },
 ];
@@ -36,7 +37,10 @@ export default function Navbar() {
       <div className="container mx-auto px-6">
         <div className="nav-container flex justify-between items-center py-6">
           <div className="hamburger-menu md:hidden">
-            <button className="cursor-pointer" onClick={handleOpen}>
+            <button
+              className="cursor-pointer transition hover:text-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary"
+              onClick={handleOpen}
+            >
               <GiHamburgerMenu />
             </button>
           </div>
@@ -55,14 +59,17 @@ export default function Navbar() {
                 >
                   Lisa church
                 </Link>
-                <button className="cursor-pointer" onClick={handleClose}>
+                <button
+                  className="cursor-pointer transition hover:text-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary"
+                  onClick={handleClose}
+                >
                   <IoCloseSharp />
                 </button>
               </div>
               <div className="nav-content flex flex-col gap-6">
                 {sideBarLinks.map((link) => (
                   <Link
-                    className="link-content flex gap-3 items-center font-extralight w-fit"
+                    className="link-content flex w-fit items-center gap-3 font-extralight transition hover:translate-x-1 hover:text-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary"
                     key={link.name}
                     to={link.path}
                   >
@@ -80,7 +87,9 @@ export default function Navbar() {
                 to={path}
                 key={name}
                 className={({ isActive }) =>
-                  isActive ? "underline underline-offset-6" : ""
+                  `transition hover:text-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary ${
+                    isActive ? "underline underline-offset-6" : ""
+                  }`
                 }
               >
                 {name}
@@ -88,11 +97,17 @@ export default function Navbar() {
             ))}
           </div>
           <div className="plan-your-visit-btn hidden md:block">
-            <Link to={""} className="bg-primary text-neutral py-2.5 px-5">
+            <Link
+              to="/visit"
+              className="bg-primary px-5 py-2.5 text-neutral transition duration-300 hover:-translate-y-0.5 hover:bg-tertiary hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0"
+            >
               Plan Your Visit
             </Link>
           </div>
-          <Link to={""} className="md:hidden">
+          <Link
+            to="/visit"
+            className="transition hover:text-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary md:hidden"
+          >
             Visit
           </Link>
         </div>

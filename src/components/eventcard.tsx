@@ -15,8 +15,12 @@ export default function EventCard({
 }: EventCard) {
   return (
     <div className="flex flex-col gap-6">
-      <div className="img-container size-88 relative">
-        <img src={img} alt="" className="absolute top-0 right-0" />
+      <div className="img-container relative aspect-square w-full overflow-hidden">
+        <img
+          src={img}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
       </div>
       <p className="date_time font-semibold text-[14px] leading-4 tracking-[1.2px] uppercase">
         {date}/{time}

@@ -27,13 +27,13 @@ export default function HomePage() {
             <div className="home-btns items-center gap-3 h-fit my-5 hidden md:flex">
               <Link
                 to={""}
-                className="bg-white text-primary px-5 py-3 uppercase text-[12px]"
+                className="bg-white px-5 py-3 text-[12px] uppercase text-primary transition duration-300 hover:-translate-y-0.5 hover:bg-tertiary hover:text-white hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white active:translate-y-0"
               >
                 Join us
               </Link>
               <Link
                 to={""}
-                className="uppercase border border-neutral px-5 py-2.5 text-[12px]"
+                className="border border-neutral px-5 py-2.5 text-[12px] uppercase transition duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-primary hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white active:translate-y-0"
               >
                 explore lisa
               </Link>
@@ -42,13 +42,13 @@ export default function HomePage() {
             <div className="home-btns flex flex-col gap-3 h-fit my-5 md:hidden">
               <Link
                 to={""}
-                className="bg-primary text-neutral px-8 py-2.5 uppercase text-[12px] text-center"
+                className="bg-primary px-8 py-2.5 text-center text-[12px] uppercase text-neutral transition duration-300 hover:-translate-y-0.5 hover:bg-tertiary hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0"
               >
                 Join us this sunday
               </Link>
               <Link
                 to={""}
-                className="uppercase border border-primary px-8 py-2.5 text-[12px] text-center"
+                className="border border-primary px-8 py-2.5 text-center text-[12px] uppercase transition duration-300 hover:-translate-y-0.5 hover:bg-primary hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0"
               >
                 watch online
               </Link>
@@ -156,13 +156,14 @@ export default function HomePage() {
             <h3 className="text-[48px] font-medium font-primary leading-14">
               Upcoming
             </h3>
-            <button className="text-[12px] tracking-[0.28px] leading-5 cursor-pointer">
+            <button className="cursor-pointer border-b border-transparent text-[12px] leading-5 tracking-[0.28px] transition hover:border-primary hover:text-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary">
               View All Events
             </button>
           </div>
-          <div className="events flex flex-col md:flex-row md:justify-between space-y-6 items-center">
+          <div className="events grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {events.map(({ name, date, time, description, img }) => (
               <EventCard
+                key={name}
                 name={name}
                 date={date}
                 time={time}

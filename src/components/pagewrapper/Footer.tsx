@@ -12,7 +12,7 @@ const footerLinks = [
 
 const connectLinks = [
   { name: "Contact Us", path: "/contact" },
-  { name: "Sermon", path: "/sermon" },
+  { name: "Sermon", path: "/sermons" },
   { name: "Prayer Request", path: "/prayer-request" },
 ];
 export default function Footer() {
@@ -33,7 +33,11 @@ export default function Footer() {
             </h3>
             <div className="footer-links flex flex-col space-y-3">
               {footerLinks.map((link) => (
-                <Link to={link.path} key={link.name} className="w-fit">
+                <Link
+                  to={link.path}
+                  key={link.name}
+                  className="w-fit transition hover:translate-x-1 hover:text-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary"
+                >
                   {link.name}
                 </Link>
               ))}
@@ -45,7 +49,11 @@ export default function Footer() {
             </h3>
             <div className="footer-links flex flex-col space-y-3">
               {connectLinks.map((link) => (
-                <Link to={link.path} key={link.name} className="w-fit">
+                <Link
+                  to={link.path}
+                  key={link.name}
+                  className="w-fit transition hover:translate-x-1 hover:text-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary"
+                >
                   {link.name}
                 </Link>
               ))}
@@ -61,7 +69,7 @@ export default function Footer() {
                 placeholder="Email address"
                 className="w-full outline-none"
               />
-              <button className="cursor-pointer pl-2">
+              <button className="cursor-pointer pl-2 transition hover:-translate-y-0.5 hover:text-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0">
                 <FaCircleArrowRight />
               </button>
             </div>
@@ -72,13 +80,22 @@ export default function Footer() {
             <p>&copy; {new Date().getFullYear()} LISA. All rights reserved.</p>
           </div>
           <div className="socials flex gap-2">
-            <Link to="">
+            <Link
+              to=""
+              className="transition hover:-translate-y-1 hover:text-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0"
+            >
               <FaFacebook size={28} />
             </Link>
-            <Link to="">
+            <Link
+              to=""
+              className="transition hover:-translate-y-1 hover:text-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0"
+            >
               <FaInstagram size={28} />
             </Link>
-            <Link to="">
+            <Link
+              to=""
+              className="transition hover:-translate-y-1 hover:text-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary active:translate-y-0"
+            >
               <Mixlr width={28} height={28} />
             </Link>
           </div>
